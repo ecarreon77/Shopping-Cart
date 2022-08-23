@@ -10,6 +10,8 @@ import { CategoriesComponent } from './component/categories/categories.component
 import { FilterPipe } from './filter/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { SortPipe } from './filter/sort.pipe';
+import { NavComponent } from './component/nav/nav.component';
+import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SortPipe } from './filter/sort.pipe';
     ProductComponent,
     CategoriesComponent,
     FilterPipe,
-    SortPipe
+    SortPipe,
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
