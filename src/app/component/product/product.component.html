@@ -1,5 +1,6 @@
+<br><br><br>
 <app-categories (actionEmitter) = "filter($event)"></app-categories>
-<div class="card-top container-fluid">
+<div class="card-top container-fluid"><br>
     <label> Sort by </label>
     <select [(ngModel)] = "SortbyParam">
         <option value="price"> Price </option>
@@ -10,16 +11,26 @@
         <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-down"></i>
     </button>
     <div class="card shadow-sm">
-        <div class=" row" >
+        <div class="row" >
             <ng-container *ngFor="let item of filterByCategory | filter:searchKey:'title' | sort:[SortbyParam, SortDirection]">
-                <div class="card col-md-3">
+                <div class="card col-md-4">
+                    <h3> {{item.name}}</h3>
                         <img src="{{item.image}}" alt="{{item.title}}">
                         <h4> {{item.title}} </h4>
-                        <p> {{item.description}} </p>
                         <p><strong> {{item.price | currency: '&#8369;' : 'code'}} </strong></p>
+                        <div class="d-grid gap-2 d-md-block">
                         <button class="btn btn-primary" (click) = addToCart(item)> Add to cart </button>
+                        <button class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            View Description</button>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                {{item.description}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </ng-container>
         </div>
     </div>
+    
 </div>

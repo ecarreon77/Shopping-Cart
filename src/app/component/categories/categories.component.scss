@@ -11,7 +11,11 @@
 }
 
 .category img{
-    width: 100px
+    width: 100px;
+}
+.category img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.6);
 }
 
 .category {
@@ -21,5 +25,7 @@
 
 .category a:hover{
     color: blue;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.6);
 }
 
