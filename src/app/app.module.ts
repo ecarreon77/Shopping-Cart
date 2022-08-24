@@ -8,10 +8,16 @@ import { HeaderComponent } from './component/header/header.component';
 import { ProductComponent } from './component/product/product.component';
 import { CategoriesComponent } from './component/categories/categories.component';
 import { FilterPipe } from './filter/filter.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SortPipe } from './filter/sort.pipe';
+
+import { AdminDashboardComponent } from './component/admin-dashboard/admin-dashboard.component';
+import { LoginComponent } from './component/login/login.component';
+import { SignupComponent } from './component/signup/signup.component';
+import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { NavComponent } from './component/nav/nav.component';
 import { HomeComponent } from './component/home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -22,14 +28,20 @@ import { HomeComponent } from './component/home/home.component';
     CategoriesComponent,
     FilterPipe,
     SortPipe,
+    AdminDashboardComponent,
+    LoginComponent,
+    SignupComponent,
+    ForgotPasswordComponent
     NavComponent,
     HomeComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
